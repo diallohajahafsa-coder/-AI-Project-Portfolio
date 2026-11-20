@@ -34,6 +34,21 @@ test("projects endpoint returns every public project with a repository link", as
   assert.equal(result.projects.filter((project) => project.demo_url).length, 3);
 });
 
+test("projects.json provides the same projects for static hosting", async () => {
+  const [apiResponse, staticResponse] = await Promise.all([
+    fetch(`${baseUrl}/api/projects`),
+    fetch(`${baseUrl}/projects.json`),
+  ]);
+  const apiResult = await apiResponse.json();
+  const staticProjects = await staticResponse.json();
+
+  assert.equal(staticResponse.status, 200);
+  assert.deepEqual(
+    staticProjects.map((project) => project.title),
+    apiResult.projects.map((project) => project.title),
+  );
+});
+
 test("contact endpoint validates and stores a message", async () => {
   const response = await fetch(`${baseUrl}/api/contact`, {
     method: "POST",

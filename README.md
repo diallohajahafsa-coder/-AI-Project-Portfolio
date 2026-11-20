@@ -21,13 +21,22 @@ Run `npm test` to exercise the projects API and contact form endpoint.
 
 ## Personalize the portfolio
 
-Update the name, introduction, skills, contact details, and social links in `index.html`. The Projects section includes all 19 public, non-fork GitHub repositories on the account (excluding this portfolio) as of November 2026. Each card links to its source repository; a live-demo button is shown only when the demo is publicly accessible. Update `projectSeeds` in `server.js` when adding or changing projects.
+Update the name, introduction, skills, contact details, and social links in `index.html`. The Projects section includes all 19 public, non-fork GitHub repositories on the account (excluding this portfolio) as of November 2026. Each card links to its source repository; a live-demo button is shown only when the demo is publicly accessible. Update `projects.json` when adding or changing projects.
+
+## Publish the responsive portfolio on GitHub Pages
+
+1. Open this repository's **Settings → Pages**.
+2. Under **Build and deployment**, choose **Deploy from a branch**.
+3. Select the `main` branch and the `/(root)` folder, then save.
+4. Open the published URL shown in the Pages settings.
+
+The static site loads project cards from `projects.json`. GitHub Pages cannot run the Express backend, so the contact form is disabled there.
 
 ## Deploy the full-stack site to Render
 
 This repository includes a `render.yaml` Blueprint. Sign in to Render, create a **New Blueprint Instance**, and connect this GitHub repository. Review the service and persistent-disk plan before deploying; Render may charge for a web service with persistent storage. The disk keeps SQLite data between restarts.
 
-The app serves both the frontend and API from one Render URL. GitHub Pages can only host static frontend files and cannot run this backend. If Pages is enabled, the contact form and live projects API will require the backend to be separately hosted and configured.
+The app serves both the frontend and API from one Render URL. Use this option if you want the contact form to submit messages.
 
 ## API
 

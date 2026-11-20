@@ -101,6 +101,20 @@ function createProjectCard(project, index) {
   return card;
 }
 
+function renderProjects(projects) {
+  projectGrid.replaceChildren(...projects.map(createProjectCard));
+  projectsStatus.textContent = projects.length ? "" : "No projects are available yet.";
+}
+
+function setContactAvailability(available) {
+  for (const control of contactForm.elements) {
+    control.disabled = !available;
+  }
+  contactStatus.textContent = available
+    ? ""
+    : "Contact messages require the backend and cannot be sent from static GitHub Pages.";
+}
+
 async function loadProjects() {
   try {
     const response = await fetch("/api/projects");
@@ -109,11 +123,24 @@ async function loadProjects() {
       throw new Error(result.error || "The projects could not be loaded.");
     }
 
-    projectGrid.replaceChildren(...result.projects.map(createProjectCard));
-    projectsStatus.textContent = result.projects.length ? "" : "No projects are available yet.";
+    renderProjects(result.projects);
+    setContactAvailability(true);
   } catch {
-    projectGrid.replaceChildren();
-    projectsStatus.textContent = "Projects could not be loaded. Check that the portfolio server is running.";
+    try {
+      const response = await fetch(new URL("projects.json", document.baseURI));
+      const projects = await response.json();
+      if (!response.ok || !Array.isArray(projects)) {
+        throw new Error("The project list could not be loaded.");
+      }
+
+      renderProjects(projects);
+      projectsStatus.textContent = "Projects are shown in static mode.";
+      setContactAvailability(false);
+    } catch {
+      projectGrid.replaceChildren();
+      projectsStatus.textContent = "Projects could not be loaded. Refresh the page or check the deployment.";
+      setContactAvailability(false);
+    }
   }
 }
 

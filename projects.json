@@ -1,0 +1,192 @@
+[
+  {
+    "category": "FULL STACK AI",
+    "title": "Fullstack AI App",
+    "description": "A full-stack AI project built with React, Flask, and MongoDB.",
+    "technologies": ["React", "Flask", "MongoDB"],
+    "repo_url": "https://github.com/diallohajahafsa-coder/fullstack-ai-app",
+    "demo_url": "",
+    "theme": "lilac",
+    "visual": "orbit"
+  },
+  {
+    "category": "WEB DEVELOPMENT",
+    "title": "IWD Practical 5-12",
+    "description": "Interactive web design practical exercises.",
+    "technologies": ["IWD", "Web Development"],
+    "repo_url": "https://github.com/diallohajahafsa-coder/iwd-practical-5-12",
+    "demo_url": "",
+    "theme": "yellow",
+    "visual": "grid"
+  },
+  {
+    "category": "COMMUNICATION",
+    "title": "Nurture AI",
+    "description": "A project focused on helping with communication.",
+    "technologies": ["TypeScript"],
+    "repo_url": "https://github.com/diallohajahafsa-coder/Nurture-AI",
+    "demo_url": "",
+    "theme": "mint",
+    "visual": "wave"
+  },
+  {
+    "category": "MOBILE GAME",
+    "title": "Cooking Master Game",
+    "description": "A mobile cooking game built with Unity 6.",
+    "technologies": ["Unity 6", "Mobile Game"],
+    "repo_url": "https://github.com/diallohajahafsa-coder/cooking-master-game",
+    "demo_url": "",
+    "theme": "lilac",
+    "visual": "grid"
+  },
+  {
+    "category": "EDUCATION",
+    "title": "AI Chatbot",
+    "description": "An educational AI chatbot project.",
+    "technologies": ["TypeScript"],
+    "repo_url": "https://github.com/diallohajahafsa-coder/AI-CHATBOT",
+    "demo_url": "",
+    "theme": "yellow",
+    "visual": "wave"
+  },
+  {
+    "category": "EDUCATION",
+    "title": "AI Chatbot for Student Support",
+    "description": "A chatbot project to help students with study support.",
+    "technologies": ["TypeScript"],
+    "repo_url": "https://github.com/diallohajahafsa-coder/AI-Chatbot-for-Student-Support",
+    "demo_url": "https://ai-chatbot-for-student-support.vercel.app",
+    "theme": "mint",
+    "visual": "orbit"
+  },
+  {
+    "category": "EDUCATION",
+    "title": "AI Assistant Study",
+    "description": "An AI assistant project to help students study.",
+    "technologies": ["TypeScript"],
+    "repo_url": "https://github.com/diallohajahafsa-coder/AI-Assistant-Study",
+    "demo_url": "",
+    "theme": "lilac",
+    "visual": "wave"
+  },
+  {
+    "category": "EDUCATION",
+    "title": "AI Study Assistant System Development",
+    "description": "A study-assistant system development project.",
+    "technologies": ["AI", "Education"],
+    "repo_url": "https://github.com/diallohajahafsa-coder/AI-Study-Assistant-System-Development",
+    "demo_url": "",
+    "theme": "yellow",
+    "visual": "orbit"
+  },
+  {
+    "category": "EDUCATION",
+    "title": "AI Study Assistant",
+    "description": "An AI study-assistant project.",
+    "technologies": ["AI", "Education"],
+    "repo_url": "https://github.com/diallohajahafsa-coder/AI-Study-Assistant-",
+    "demo_url": "",
+    "theme": "mint",
+    "visual": "grid"
+  },
+  {
+    "category": "EDUCATION",
+    "title": "AI Study Assistant System",
+    "description": "A system to help students learn and grow.",
+    "technologies": ["TypeScript"],
+    "repo_url": "https://github.com/diallohajahafsa-coder/AI-Study-Assistant-System",
+    "demo_url": "https://ai-study-assistant-system.vercel.app",
+    "theme": "lilac",
+    "visual": "orbit"
+  },
+  {
+    "category": "WEB DEVELOPMENT",
+    "title": "Online Library Management System",
+    "description": "An online library-management project.",
+    "technologies": ["TypeScript"],
+    "repo_url": "https://github.com/diallohajahafsa-coder/Build-an-Online-Library-Management-System",
+    "demo_url": "https://build-an-online-library-management.vercel.app",
+    "theme": "yellow",
+    "visual": "grid"
+  },
+  {
+    "category": "EDUCATION",
+    "title": "AI Study Assistant",
+    "description": "An AI project to help with study.",
+    "technologies": ["TypeScript"],
+    "repo_url": "https://github.com/diallohajahafsa-coder/AI-Study-Assistant",
+    "demo_url": "",
+    "theme": "mint",
+    "visual": "wave"
+  },
+  {
+    "category": "TRAVEL",
+    "title": "AI Traveling Assistant",
+    "description": "A travel assistant powered by AI.",
+    "technologies": ["AI", "Travel"],
+    "repo_url": "https://github.com/diallohajahafsa-coder/AI-Traveling-Assistant",
+    "demo_url": "",
+    "theme": "lilac",
+    "visual": "grid"
+  },
+  {
+    "category": "WEB DEVELOPMENT",
+    "title": "IWD Practice",
+    "description": "A repository for IWD practice.",
+    "technologies": ["IWD", "Practice"],
+    "repo_url": "https://github.com/diallohajahafsa-coder/IWD-Practice",
+    "demo_url": "",
+    "theme": "yellow",
+    "visual": "wave"
+  },
+  {
+    "category": "TRAVEL",
+    "title": "AI Travel Assistant",
+    "description": "A travel assistant powered by AI.",
+    "technologies": ["AI", "Travel"],
+    "repo_url": "https://github.com/diallohajahafsa-coder/AI-Travel-Assistant",
+    "demo_url": "",
+    "theme": "mint",
+    "visual": "orbit"
+  },
+  {
+    "category": "TRAVEL",
+    "title": "AI Travel",
+    "description": "An AI project for planning trips.",
+    "technologies": ["AI", "Travel"],
+    "repo_url": "https://github.com/diallohajahafsa-coder/AI-travel",
+    "demo_url": "",
+    "theme": "lilac",
+    "visual": "wave"
+  },
+  {
+    "category": "TRAVEL",
+    "title": "AI Travel Planner",
+    "description": "An AI travel-planning project.",
+    "technologies": ["TypeScript", "Travel"],
+    "repo_url": "https://github.com/diallohajahafsa-coder/AI-Travel-Planner",
+    "demo_url": "",
+    "theme": "yellow",
+    "visual": "orbit"
+  },
+  {
+    "category": "AI ASSISTANT",
+    "title": "AI Assistant 2",
+    "description": "An AI assistant optimization project.",
+    "technologies": ["Shell", "AI"],
+    "repo_url": "https://github.com/diallohajahafsa-coder/AI-assistant2",
+    "demo_url": "",
+    "theme": "mint",
+    "visual": "grid"
+  },
+  {
+    "category": "AI ASSISTANT",
+    "title": "AI Assistant",
+    "description": "An AI assistant optimization project.",
+    "technologies": ["TypeScript"],
+    "repo_url": "https://github.com/diallohajahafsa-coder/AI-assistant",
+    "demo_url": "",
+    "theme": "lilac",
+    "visual": "orbit"
+  }
+]

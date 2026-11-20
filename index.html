@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#f7f7f2">
     <title>Your Name | AI Project Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js?v=2" defer></script>
+    <script src="script.js?v=3" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -102,18 +102,18 @@
           <form class="contact-form" id="contact-form">
             <label>
               Your name
-              <input name="name" type="text" autocomplete="name" minlength="2" maxlength="80" required>
+              <input name="name" type="text" autocomplete="name" minlength="2" maxlength="80" required disabled>
             </label>
             <label>
               Email address
-              <input name="email" type="email" autocomplete="email" maxlength="254" required>
+              <input name="email" type="email" autocomplete="email" maxlength="254" required disabled>
             </label>
             <label>
               Your message
-              <textarea name="message" rows="4" minlength="10" maxlength="5000" required></textarea>
+              <textarea name="message" rows="4" minlength="10" maxlength="5000" required disabled></textarea>
             </label>
-            <button class="button button-light" type="submit">Send message <span aria-hidden="true">↗</span></button>
-            <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+            <button class="button button-light" type="submit" disabled>Send message <span aria-hidden="true">↗</span></button>
+            <p class="form-status" id="contact-status" role="status" aria-live="polite">Checking contact service…</p>
           </form>
           <div class="social-links">
             <a href="https://github.com/diallohajahafsa-coder/-AI-Project-Portfolio" target="_blank" rel="noreferrer">Source on GitHub <span aria-hidden="true">↗</span></a>
