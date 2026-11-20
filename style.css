@@ -292,6 +292,26 @@ h2 {
 .project-card > p { min-height: 4.7rem; margin-bottom: 1rem; color: var(--muted); font-size: 0.84rem; line-height: 1.7; }
 .tag-list { display: flex; flex-wrap: wrap; gap: 0.45rem; }
 .tag-list span { padding: 0.38rem 0.6rem; border: 1px solid var(--line); border-radius: 999px; font-size: 0.65rem; }
+.project-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.2rem; }
+.project-links a {
+  display: inline-flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  min-height: 40px;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-align: center;
+}
+.project-links a:hover { background: #e9eadf; }
+.project-links .project-demo-link { background: var(--ink); color: white; }
+.project-links .project-demo-link:hover { background: #41483a; }
+.project-links a span { font-size: 0.8rem; }
+.project-loading { grid-column: 1 / -1; color: var(--muted); font-size: 0.9rem; }
 .api-status { min-height: 1rem; margin: 1.25rem 0 0; color: var(--muted); font-size: 0.78rem; }
 
 .skills { border-top: 0; border-bottom: 1px solid var(--line); }

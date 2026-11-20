@@ -23,14 +23,15 @@ afterEach(async () => {
   database.close();
 });
 
-test("projects endpoint returns the starter portfolio projects", async () => {
+test("projects endpoint returns every public project with a repository link", async () => {
   const response = await fetch(`${baseUrl}/api/projects`);
   const result = await response.json();
 
   assert.equal(response.status, 200);
-  assert.equal(result.projects.length, 3);
-  assert.equal(result.projects[0].title, "Your First AI Project");
-  assert.deepEqual(result.projects[0].technologies, ["Python", "Scikit-learn", "Data"]);
+  assert.equal(result.projects.length, 19);
+  assert.equal(result.projects[0].title, "Fullstack AI App");
+  assert.ok(result.projects.every((project) => project.repo_url.startsWith("https://github.com/diallohajahafsa-coder/")));
+  assert.equal(result.projects.filter((project) => project.demo_url).length, 3);
 });
 
 test("contact endpoint validates and stores a message", async () => {

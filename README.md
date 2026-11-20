@@ -21,7 +21,7 @@ Run `npm test` to exercise the projects API and contact form endpoint.
 
 ## Personalize the portfolio
 
-Update the name, introduction, skills, contact details, and social links in `index.html`. Replace the starter project entries in `server.js` to update the projects API; the site renders projects returned by that API. The example content and skills are placeholders.
+Update the name, introduction, skills, contact details, and social links in `index.html`. The Projects section includes all 19 public, non-fork GitHub repositories on the account (excluding this portfolio) as of November 2026. Each card links to its source repository; a live-demo button is shown only when the demo is publicly accessible. Update `projectSeeds` in `server.js` when adding or changing projects.
 
 ## Deploy the full-stack site to Render
 

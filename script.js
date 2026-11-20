@@ -28,6 +28,30 @@ function createTextElement(tagName, className, text) {
   return element;
 }
 
+function createExternalLink(url, label, className = "") {
+  if (!url) {
+    return null;
+  }
+
+  let destination;
+  try {
+    destination = new URL(url);
+  } catch {
+    return null;
+  }
+  if (destination.protocol !== "https:") {
+    return null;
+  }
+
+  const link = createTextElement("a", className, label);
+  link.href = destination.href;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.append(createTextElement("span", "", "↗"));
+  link.lastElementChild.setAttribute("aria-hidden", "true");
+  return link;
+}
+
 function createProjectCard(project, index) {
   const themes = ["lilac", "yellow", "mint"];
   const visuals = ["orbit", "grid", "wave"];
@@ -57,10 +81,23 @@ function createProjectCard(project, index) {
 
   const tags = document.createElement("div");
   tags.className = "tag-list";
-  for (const technology of project.technologies) {
-    tags.append(createTextElement("span", "", technology));
+  if (Array.isArray(project.technologies)) {
+    for (const technology of project.technologies) {
+      tags.append(createTextElement("span", "", technology));
+    }
   }
-  card.append(tags);
+
+  const links = document.createElement("div");
+  links.className = "project-links";
+  const sourceLink = createExternalLink(project.repo_url, "Source code");
+  const demoLink = createExternalLink(project.demo_url, "Live demo", "project-demo-link");
+  if (sourceLink) {
+    links.append(sourceLink);
+  }
+  if (demoLink) {
+    links.append(demoLink);
+  }
+  card.append(tags, links);
   return card;
 }
 
@@ -73,9 +110,10 @@ async function loadProjects() {
     }
 
     projectGrid.replaceChildren(...result.projects.map(createProjectCard));
-    projectsStatus.textContent = "";
+    projectsStatus.textContent = result.projects.length ? "" : "No projects are available yet.";
   } catch {
-    projectsStatus.textContent = "The backend is unavailable. Showing the example projects instead.";
+    projectGrid.replaceChildren();
+    projectsStatus.textContent = "Projects could not be loaded. Check that the portfolio server is running.";
   }
 }
 
