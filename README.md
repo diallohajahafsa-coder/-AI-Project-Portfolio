@@ -1,19 +1,32 @@
 # AI Project Portfolio
 
-A responsive, static portfolio page built with HTML, CSS, and JavaScript.
+A responsive full-stack portfolio. The frontend is served by an Express backend, which provides a projects API and saves contact form submissions in SQLite.
 
 ## Run locally
 
-Open `index.html` in a browser. No build tools or dependencies are required.
+1. Install Node.js 22.13 or newer.
+2. From this folder, run `npm install`.
+3. Run `npm start`.
+4. Open [http://localhost:3000](http://localhost:3000).
 
-## Make it yours
+The local database is created at `data/portfolio.db`. Project data is refreshed from `server.js` at startup. Contact messages are validated, rate-limited, and stored on the server; they are not emailed automatically.
 
-Update the name, introduction, project descriptions, skills, contact email, and social links in `index.html`. Replace the `YN` initials and page title with your own details.
+## Test
 
-## Publish with GitHub Pages
+Run `npm test` to exercise the projects API and contact form endpoint.
 
-1. Push this project to the `main` branch of your GitHub repository.
-2. In the repository, open **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Choose **main** and the **/(root)** folder, then save.
-5. Wait for the deployment and open the URL shown in the Pages settings.
+## Personalize the portfolio
+
+Update the name, introduction, skills, contact details, and social links in `index.html`. Replace the starter project entries in `server.js` to update the projects API; the site renders projects returned by that API. The example content and skills are placeholders.
+
+## Deploy the full-stack site to Render
+
+This repository includes a `render.yaml` Blueprint. Sign in to Render, create a **New Blueprint Instance**, and connect this GitHub repository. Review the service and persistent-disk plan before deploying; Render may charge for a web service with persistent storage. The disk keeps SQLite data between restarts.
+
+The app serves both the frontend and API from one Render URL. GitHub Pages can only host static frontend files and cannot run this backend. If Pages is enabled, the contact form and live projects API will require the backend to be separately hosted and configured.
+
+## API
+
+- `GET /api/health` — deployment health check
+- `GET /api/projects` — portfolio projects
+- `POST /api/contact` — store a message (`name`, `email`, and `message` as JSON)

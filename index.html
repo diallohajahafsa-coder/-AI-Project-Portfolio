@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#f7f7f2">
     <title>Your Name | AI Project Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="script.js?v=2" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -72,7 +72,7 @@
             </div>
             <p class="section-note">A few projects from my AI and data journey. Replace these starter cards with your own work.</p>
           </div>
-          <div class="project-grid">
+          <div class="project-grid" id="project-grid">
             <article class="project-card project-card-lilac">
               <div class="project-visual visual-orbit" aria-hidden="true"><span>01</span><i></i><b></b></div>
               <div class="project-meta"><span>01 — MACHINE LEARNING</span><span class="project-arrow" aria-hidden="true">↗</span></div>
@@ -95,6 +95,7 @@
               <div class="tag-list"><span>Jupyter</span><span>Visualization</span><span>AI</span></div>
             </article>
           </div>
+          <p class="api-status" id="projects-status" aria-live="polite"></p>
         </div>
       </section>
 
@@ -118,7 +119,22 @@
           <p class="eyebrow">04 / SAY HELLO</p>
           <h2>Have an idea?<br><span>Let's talk.</span></h2>
           <p>I'm always happy to connect, learn, and explore interesting ideas.</p>
-          <a class="button button-light" href="mailto:your.email@example.com">your.email@example.com <span aria-hidden="true">↗</span></a>
+          <form class="contact-form" id="contact-form">
+            <label>
+              Your name
+              <input name="name" type="text" autocomplete="name" minlength="2" maxlength="80" required>
+            </label>
+            <label>
+              Email address
+              <input name="email" type="email" autocomplete="email" maxlength="254" required>
+            </label>
+            <label>
+              Your message
+              <textarea name="message" rows="4" minlength="10" maxlength="5000" required></textarea>
+            </label>
+            <button class="button button-light" type="submit">Send message <span aria-hidden="true">↗</span></button>
+            <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+          </form>
           <div class="social-links">
             <a href="https://github.com/diallohajahafsa-coder" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
             <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>

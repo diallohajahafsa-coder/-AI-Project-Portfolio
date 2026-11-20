@@ -292,6 +292,7 @@ h2 {
 .project-card > p { min-height: 4.7rem; margin-bottom: 1rem; color: var(--muted); font-size: 0.84rem; line-height: 1.7; }
 .tag-list { display: flex; flex-wrap: wrap; gap: 0.45rem; }
 .tag-list span { padding: 0.38rem 0.6rem; border: 1px solid var(--line); border-radius: 999px; font-size: 0.65rem; }
+.api-status { min-height: 1rem; margin: 1.25rem 0 0; color: var(--muted); font-size: 0.78rem; }
 
 .skills { border-top: 0; border-bottom: 1px solid var(--line); }
 .skills-content { padding-top: 0.4rem; }
@@ -306,7 +307,22 @@ h2 {
 .contact h2 { font-size: clamp(3.3rem, 6vw, 5.5rem); }
 .contact h2 span { color: var(--lime); }
 .contact-inner > p:not(.eyebrow) { margin: 1.4rem 0 1.7rem; color: #c2c5bc; }
-.contact .button { margin-bottom: 2.4rem; }
+.contact-form { display: grid; gap: 1rem; max-width: 520px; margin: 0 auto 2.4rem; text-align: left; }
+.contact-form label { display: grid; gap: 0.45rem; color: #e0e1da; font-size: 0.78rem; font-weight: 600; }
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 0.85rem 0.95rem;
+  border: 1px solid #55594f;
+  border-radius: 5px;
+  background: #2b2e28;
+  color: white;
+  font: 400 0.9rem/1.5 var(--sans);
+}
+.contact-form input:focus, .contact-form textarea:focus { border-color: var(--lime); outline: 2px solid var(--lime); outline-offset: 2px; }
+.contact-form textarea { resize: vertical; }
+.contact-form .button { justify-self: center; margin-top: 0.3rem; border: 0; cursor: pointer; }
+.contact-form .button:disabled { cursor: wait; opacity: 0.65; }
+.form-status { min-height: 1.25rem; margin: 0; color: #dfe1d8; font-size: 0.82rem; text-align: center; }
 .social-links { display: flex; justify-content: center; gap: 1.6rem; }
 .social-links a { color: #dfe1d8; font-size: 0.78rem; }
 
@@ -321,7 +337,6 @@ h2 {
   .art-center { width: 115px; }
   .about, .skills { gap: 2.5rem; }
   .project-grid { grid-template-columns: 1fr 1fr; }
-  .project-card:last-child { display: none; }
 }
 
 @media (max-width: 620px) {
@@ -366,7 +381,6 @@ h2 {
   .projects-heading { display: block; margin-bottom: 2rem; }
   .section-note { margin-top: 1rem; }
   .project-grid { grid-template-columns: 1fr; gap: 1rem; }
-  .project-card:last-child { display: block; }
   .project-visual { height: 190px; }
   .project-card > p { min-height: 0; }
   .contact h2 { font-size: clamp(3.2rem, 14vw, 4.4rem); }
