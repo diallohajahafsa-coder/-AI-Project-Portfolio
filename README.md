@@ -2,6 +2,10 @@
 
 A responsive full-stack portfolio. The frontend is served by an Express backend, which provides a projects API and saves contact form submissions in SQLite.
 
+**GitHub account:** [@diallohajahafsa-coder](https://github.com/diallohajahafsa-coder)
+
+**Project repository:** [AI Project Portfolio](https://github.com/diallohajahafsa-coder/-AI-Project-Portfolio)
+
 ## Run locally
 
 1. Install Node.js 22.13 or newer.
